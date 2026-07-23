@@ -148,7 +148,7 @@ When the user clearly asks to perform a Git commit in any language, including an
 3. Aggregate the matching summaries in English, translating them when necessary and merging substantially duplicate entries into one concise change description.
 4. Create `.superpowers/changelog/CHANGELOG.md` when it does not exist, then append the aggregated change list to it.
 5. Rename every processed `uncommited_changes_yyyy_mm_dd_hh_MM_ss.md` file to `commited_changes_yyyy_mm_dd_hh_MM_ss.md`.
-6. Commit the intended changes, including the updated changelog and renamed files, with a short, accurate commit message that describes the changes.
+6. Commit the intended changes, including the updated changelog and renamed files. Distill the Git commit message from the latest known contents of `.superpowers/changelog/CHANGELOG.md`. Keep it concise, accurate, and no longer than 100 words.
 
 When the user clearly asks to push, first complete the same workflow. After updating `.superpowers/changelog/CHANGELOG.md` and before creating the commit, copy its latest complete contents to `CHANGELOG.md` in the project root, replacing the root file's previous contents when it already exists. Include the root changelog in the commit, commit when there are changes to commit, and then push the resulting commit to the configured remote. Continue to follow any higher-priority permission, safety, and remote-operation requirements.
 
