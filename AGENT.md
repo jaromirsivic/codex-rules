@@ -34,9 +34,80 @@ If a user asks for a list of important shortcuts, a list of the most important i
 4. Uživatel provádí změny, tím, že řekne agentovi co má upravit, nebo mu dá seznam změn (change requests uložený např. v ./pm/cr001.md)
 5. Po implementaci změn je uživatel otestuje a potvrdí příkazem "Commit"
 
+# Init Project
+
+When the user asks to initialize a project, initialize the current directory, create a new web project, or makes an equivalent request in any language, guide them through initializing the current directory as a new web project. Conduct the entire workflow in the language used by the user.
+
+Ask the user the following questions, presenting the first option as the default:
+
+1. Whether to use Superpowers for initialization:
+   - Yes (default)
+   - No
+2. Explain that Uvicorn and FastAPI will be used for the web server and backend framework, then ask whether the user agrees:
+   - Yes (default)
+   - Other
+3. Explain that Mantine libraries will be used to build the graphical interface, then ask whether the user agrees:
+   - Yes (default)
+   - Other
+4. Which database or data storage to use during development:
+   - No database (default). Use standalone JSON files in `master-data` for configuration and `data` for live data.
+   - PostgreSQL
+   - MongoDB
+   - Other
+
+After collecting the answers, create `.administration/hlc.md` in the current project. Write its explanatory text and TODO instructions in the user's language, and use this structure:
+
+```markdown
+# Agent Skills
+
+[State that the AI must have the following skills installed to implement the project correctly. If any are missing, the AI must install them after the user permits the installation.]
+
+[List the required skills based on the user's answers, for example:]
+- Superpowers
+- Mantine
+
+# General
+
+[Write these requirements in the user's language:
+- The project must be multilingual. English and Czech must be included by default, and all web portal and front-end text that can be localized must be available in both languages.
+- The project must run on Windows, Linux, and macOS.
+- The web portal must be responsive and usable in desktop, mobile, and tablet web browsers.
+- The server side must be secure against threats and resilient to failures.
+- After implementing the project, create `start-server.bat` and `stop-server.bat` for Windows, together with equivalent `start-server.sh` and `stop-server.sh` scripts for Unix-like systems, including Linux and macOS.]
+
+# Technology Stack
+
+[List the selected technologies based on the user's answers, for example:]
+- Python
+- Uvicorn
+- FastAPI
+- React
+- Mantine
+
+# Project Overview
+
+TODO: [In the user's language: Describe in one paragraph what this project or application will do, who it is intended for, and what it should achieve.]
+
+# Front End
+
+TODO: [In the user's language: Describe how the web portal should look, including its layout, menu location, content area, menu items, and what the content area should display when the user selects each menu item.]
+
+# Back End
+
+TODO: [In the user's language: Describe how the backend should behave, including the REST API endpoint structure if desired, scheduled tasks and their intervals, data flows, and any integrations with third-party systems.]
+```
+
+Include only skills and technologies consistent with the user's answers, including the selected database or JSON-file storage approach. Then ask the user to edit `.administration/hlc.md`. Tell them that when it is ready, they should enter the command equivalent of `Process the high-level concept` in their language.
+
+# Process the high-level concept
+
+When the user later asks to process the high-level concept created after "Init Project" command iw finished or makes an equivalent request in any language, read `.administration/hlc.md` and determine from the initialization choices whether Superpowers should be used. If Superpowers was selected, activate `superpowers:brainstorming` and use it to process the file. If Superpowers was not selected, begin implementation based on the file without Superpowers. Start implementation in Plan mode. If the agent is not in Plan mode, ask the user to switch to Plan mode, then continue after the switch.
+
 # Superpowers skill use policy
 
 Use Superpowers selectively so that its workflow is applied only when its benefits justify the additional token usage.
+
+If this policy determines that a Superpowers skill should be used but Superpowers is not installed or the required skill is unavailable, recommend that the user install Superpowers.
 
 When the user is starting a new project, typically from a high-level concept, use `superpowers:brainstorming` and carry the development workflow through from the beginning using the relevant Superpowers skills.
 
