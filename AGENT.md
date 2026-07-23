@@ -125,6 +125,8 @@ The goal of this policy is to conserve tokens and invoke Superpowers only when t
 
 # Git and Superpowers change tracking
 
+Whenever creating or modifying any changelog file, write all added or updated changelog text in English, regardless of the language used by the user or elsewhere in the project.
+
 ## Synchronization of Codex master rules
 
 When modifying the Codex master rules file, check whether `C:\git\codex-rules` exists and contains `agents.md`. If it does, transfer every change made to the master rules into `C:\git\codex-rules\agents.md`. Before committing or pushing that directory's repository, request and obtain the user's explicit approval for the commit and push. Do not create the directory or file solely for this synchronization.
@@ -135,7 +137,7 @@ When a task finishes successfully and the agent edited at least one file within 
 
 ## Completed Superpowers project edits
 
-When a task finishes successfully and the agent edited at least one file within a project whose root contains a `.superpowers` directory, create `.superpowers/changelog` if it does not exist. Then create a concise summary of what was added, changed, fixed, or repaired during that task in a new file named `.superpowers/changelog/uncommited_changes_yyyy_mm_dd_hh_MM_ss.md`, using the local completion timestamp in the filename. Write the summary in the language used by the user. These files are input for the later changelog, so keep each summary factual and brief.
+When a task finishes successfully and the agent edited at least one file within a project whose root contains a `.superpowers` directory, create `.superpowers/changelog` if it does not exist. Then create a concise summary in English of what was added, changed, fixed, or repaired during that task in a new file named `.superpowers/changelog/uncommited_changes_yyyy_mm_dd_hh_MM_ss.md`, using the local completion timestamp in the filename. These files are input for the later changelog, so keep each summary factual and brief.
 
 ## Commit and push workflow
 
@@ -143,12 +145,12 @@ When the user clearly asks to perform a Git commit in any language, including an
 
 1. Before creating the commit, inspect every `.superpowers/changelog/uncommited_changes_*.md` file when that directory and such files exist.
 2. Check that each recorded summary matches the changes that are intended for the commit. Do not include summaries that do not match the selected commit scope.
-3. Aggregate the matching summaries, merging substantially duplicate entries into one concise change description.
+3. Aggregate the matching summaries in English, translating them when necessary and merging substantially duplicate entries into one concise change description.
 4. Create `.superpowers/changelog/CHANGELOG.md` when it does not exist, then append the aggregated change list to it.
 5. Rename every processed `uncommited_changes_yyyy_mm_dd_hh_MM_ss.md` file to `commited_changes_yyyy_mm_dd_hh_MM_ss.md`.
 6. Commit the intended changes, including the updated changelog and renamed files, with a short, accurate commit message that describes the changes.
 
-When the user clearly asks to push, first complete the same workflow, including a commit when there are changes to commit, and then push the resulting commit to the configured remote. Continue to follow any higher-priority permission, safety, and remote-operation requirements.
+When the user clearly asks to push, first complete the same workflow. After updating `.superpowers/changelog/CHANGELOG.md` and before creating the commit, copy its latest complete contents to `CHANGELOG.md` in the project root, replacing the root file's previous contents when it already exists. Include the root changelog in the commit, commit when there are changes to commit, and then push the resulting commit to the configured remote. Continue to follow any higher-priority permission, safety, and remote-operation requirements.
 
 # Destructive-action safety policy
 
