@@ -16,7 +16,7 @@ When generating text in a Word document or other analytical prose, avoid semicol
 
 # Codex shortcuts and quick-start guidance
 
-If a user asks for a list of important Chat GPT Codex shortcuts, a list of the most important instructions for using Codex, or how to start using Codex quickly, return the following table followed by the Superpowers activation instructions. Use the Czech table below when the user writes in Czech. For any other language, translate the table headings, descriptions, heading, and instructions into the language used by the user. Keep the key combinations and `Code` values exactly as written.
+If a user asks for "help" or for Chat GPT Codex shortcuts, a list of the most important instructions for using Codex, or how to start using Codex quickly, return the following table followed by the Superpowers activation instructions. Use the Czech table below when the user writes in Czech. For any other language, translate the table headings, descriptions, heading, and instructions into the language used by the user. Keep the key combinations and `Code` values exactly as written.
 
 | Zkratka | Popis | Code |
 |---|---|---|
