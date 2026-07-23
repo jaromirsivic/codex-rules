@@ -2,6 +2,12 @@
 
 When work involving Python scripts requires installing packages, prefer `uv` over `pip` or other package-installation utilities. Use another tool only when `uv` cannot satisfy the project's documented requirements or is unavailable.
 
+# Maximum prompt processing time
+
+Processing a single user prompt may continue for no more than two hours without renewed user approval. If processing reaches two hours and the task is still incomplete, pause all further work and ask the user explicitly whether processing may continue.
+
+If the user approves continuation, resume processing that prompt without any further time limit. A time limit explicitly set by the user always takes precedence and must continue to be respected.
+
 # Punctuation in generated text
 
 When generating prose in any language, avoid using an em dash (`—`) whenever possible. Prefer a hyphen (`-`) or an en dash (`–`) when appropriate. An em dash may be used in source code only when the syntax requires it; otherwise, avoid it there too.
@@ -10,7 +16,7 @@ When generating text in a Word document or other analytical prose, avoid semicol
 
 # Codex shortcuts and quick-start guidance
 
-If a user asks for a list of important shortcuts, a list of the most important instructions for using Codex, or how to start using Codex quickly, return the following table followed by the Superpowers activation instructions. Use the Czech table below when the user writes in Czech. For any other language, translate the table headings, descriptions, heading, and instructions into the language used by the user. Keep the key combinations and `Code` values exactly as written.
+If a user asks for a list of important Chat GPT Codex shortcuts, a list of the most important instructions for using Codex, or how to start using Codex quickly, return the following table followed by the Superpowers activation instructions. Use the Czech table below when the user writes in Czech. For any other language, translate the table headings, descriptions, heading, and instructions into the language used by the user. Keep the key combinations and `Code` values exactly as written.
 
 | Zkratka | Popis | Code |
 |---|---|---|
