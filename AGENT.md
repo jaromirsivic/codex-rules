@@ -73,6 +73,8 @@ After collecting the answers, create `.administration/hlc.md` in the current pro
 - The project must run on Windows, Linux, and macOS.
 - The web portal must be responsive and usable in desktop, mobile, and tablet web browsers.
 - The server side must be secure against threats and resilient to failures.
+- Errors must be returned with clear, human-readable descriptions that make it possible to understand what went wrong, rather than as unexplained numeric codes only.
+- Both the server side and the front end, including relevant output in the web browser console, must have high-quality logging that provides enough context for troubleshooting without creating excessive load on the server.
 - After implementing the project, create `start-server.bat` and `stop-server.bat` for Windows, together with equivalent `start-server.sh` and `stop-server.sh` scripts for Unix-like systems, including Linux and macOS.]
 
 # Technology Stack
@@ -154,9 +156,9 @@ Apply this section to every task, tool, surface, app, connector, shell, script, 
 
 ## Project root and mode resolution
 
-Resolve the canonical root directory of the current active project or workspace before applying this policy or managing its marker file. The `.global-safety-off` marker is located directly in that root directory.
+Resolve the canonical root directory of the current active project or workspace before applying this policy or managing its marker file. The marker is located at `.administration/.global-safety-off` within that root directory.
 
-Safety restrictions from this policy are always disabled for operations fully contained within the resolved project root. If `.global-safety-off` exists in the project root, use global safety-off mode for all other operations. Otherwise, use normal safety mode for operations that are not fully contained within the project root.
+Safety restrictions from this policy are always disabled for operations fully contained within the resolved project root. If `.administration/.global-safety-off` exists in the project root, use global safety-off mode for all other operations. Otherwise, use normal safety mode for operations that are not fully contained within the project root.
 
 ## Project-contained operations
 
@@ -183,19 +185,19 @@ This mode changes only the restrictions defined in this section. It does not dis
 
 ## Activating global safety-off mode
 
-If the user enters the exact phrase `Vypni bezpečnostní opatření pro tento počítač`, create an empty `.global-safety-off` file directly in the project root and acknowledge that global safety-off mode is active. The exact phrase is sufficient authorization to create or replace that marker and requires no additional confirmation.
+If the user enters the exact phrase `Vypni bezpečnostní opatření pro tento počítač`, ensure that the `.administration` directory exists in the project root, create an empty `.administration/.global-safety-off` file there, and acknowledge that global safety-off mode is active. The exact phrase is sufficient authorization to create or replace that marker and requires no additional confirmation.
 
 Creating the marker changes the effective safety mode but does not itself request or authorize any unrelated action. If the marker already exists, leave it in place and acknowledge the already-active mode.
 
 ## Re-enabling safety
 
-No exact phrase is required to re-enable global safety. The user must clearly and unambiguously request that global safety measures be turned back on. Remove `.global-safety-off` from the project root in response to that request.
+No exact phrase is required to re-enable global safety. The user must clearly and unambiguously request that global safety measures be turned back on. Remove `.administration/.global-safety-off` from the project root in response to that request.
 
 The clear re-enable request is itself sufficient authorization to remove the marker. Do not require the mandatory two-step authorization for that marker removal. If the marker does not exist, report that global safety measures were already enabled for operations outside the project.
 
 ## Normal safety mode
 
-When `.global-safety-off` does not exist, apply all remaining requirements in this policy to any operation that is not fully contained within the project root.
+When `.administration/.global-safety-off` does not exist in the project root, apply all remaining requirements in this policy to any operation that is not fully contained within the project root.
 
 ### Mandatory two-step authorization
 
