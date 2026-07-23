@@ -4,7 +4,7 @@ When work involving Python scripts requires installing packages, prefer `uv` ove
 
 # Maximum prompt processing time
 
-Processing a single user prompt may continue for no more than two hours without renewed user approval. If processing reaches two hours and the task is still incomplete, pause all further work and ask the user explicitly whether processing may continue.
+Processing a single user prompt may continue for no more than two hours without renewed user approval. Track this limit internally, but do not mention the limit, elapsed time, or remaining time in routine chat updates. If processing reaches two hours and the task is still incomplete, pause all further work and ask the user explicitly whether processing may continue.
 
 If the user approves continuation, resume processing that prompt without any further time limit. A time limit explicitly set by the user always takes precedence and must continue to be respected.
 
