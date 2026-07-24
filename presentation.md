@@ -1,17 +1,96 @@
 - Co je umělá inteligence
+  - Vysvětlení, že umělá inteligence je technologie, která z dat rozpoznává vzory a pomáhá řešit úlohy.
+  - Příklady z běžného života: doporučení obsahu, překladače, rozpoznávání obrazu a hlasoví asistenti.
+  - Zdůraznění, že AI nemyslí jako člověk, ale vytváří odpovědi podle naučených souvislostí.
 - Co je LLM
+  - Jazykový model pracující s velkým množstvím textu.
+  - Předpovídá další slova podle kontextu.
+  - Umí psát, shrnovat, překládat i odpovídat.
+- Co je to token
 - Vývoj v posledních několika měsících
+  - GPT-5.6 spojil rychlé odpovědi s hlubším uvažováním.
+  - Modely lépe plánují vícekrokové úkoly a používají nástroje.
+  - AI přesněji pracuje s kódem, obrazem i dlouhým kontextem.
+  - Agenti stále častěji samostatně provádějí pracovní postupy.s
 - Rozdíl mezi asistentem a agentem
-- Aktuální nástroje Codex, Claude a Cursor
+  - Asistent reaguje na příkazy podle předem určených pravidel.
+  - AI asistent rozumí jazyku a navrhuje odpovědi.
+  - AI agent sám plánuje, používá nástroje a dokončuje úkoly.
+- Aktuální nástroje Codex, Claude Code a Cursor
+  - Codex: agent pro samostatné programování, testy a větší úkoly.
+  - Claude Code: terminálový agent pro úpravy kódu a testy.
+  - Cursor: editor s rychlým doplňováním a úpravami přímo v kódu.
+  - Codex se hodí pro delegování delších úkolů a automatické testování. Claude Code pracuje přímo v terminálu a dobře rozumí projektu. Cursor je nejrychlejší pro průběžné úpravy v editoru. Codex a Claude Code vyžadují jasné zadání a kontrolu výsledku, Cursor je slabší pro dlouhé úkoly na pozadí.
 - Kodex aplikace a základní rozložení
-- Levý panel
+  - Levý panel: projekty, úkoly a rychlá navigace.
+    - Přepínání mezi projekty, úkoly a historií.
+    - Vytvoření nového úkolu a hledání starších konverzací.
+  - Střed: rozhovor, zadání a postup práce agenta.
+    - Zadání přirozeným jazykem a průběžná komunikace.
+    - Zobrazení plánu, výsledků a průběhu práce.
+  - Pravý panel: soubory, kontext a podrobnosti aktuálního úkolu.
+    - Prohlížeč souborů pro aktuální projekt.
+    - Kontext úkolu, nastavení a doplňkové informace.
 - Co je model
+  - Model je AI systém naučený rozpoznávat vzory v datech.
+  - Luna: rychlá volba pro jasné, opakované úkoly.
+  - Terra: vyvážený model pro běžnou práci s nástroji.
+  - Sol: nejvyšší kvalita pro složité a otevřené úkoly.
+  - Doporučení: jako výchozí nastavení používat Sol Medium.
 - Co je effort
+  - Effort určuje, kolik úsilí model věnuje přemýšlení.
+  - Low neboli Light: rychlé, jasně vymezené úkoly.
+  - Medium: rovnováha mezi rychlostí a kvalitou.
+  - High: složitější úkoly s více kroky.
+  - Extra High: náročné problémy s analýzou a kontrolou.
+  - Max: nejvíce času pro jeden zvlášť těžký úkol.
+  - Ultra: paralelní subagenti pro rozdělenou komplexní práci.
 - Typy přístupu k počítači včetně full access
+  - Read-only: pouze čtení, analýza a plánování bez změn.
+  - Workspace-write: úpravy a příkazy jen v projektu.
+  - Auto: práce v projektu, citlivé kroky vyžadují schválení.
+  - Full access: přístup bez omezení pracovního prostoru a sandboxu.
+  - Full access je vhodný pro důvěryhodné, řízené projekty.
+  - Hlavní pravidlo určuje hranice, kontroly a zakázané činnosti.
+  - Bez jasných pravidel zůstává bezpečnější Auto nebo workspace-write.
 - Platby v aplikaci
+  - Standardní režim šetří kredity při běžné práci.
+  - Fast nepřepínejte bez konkrétního důvodu.
+  - Fast: 1,5× rychlejší, ale spotřebuje 2,5× více kreditů.
+  - Placené nabídky potvrďte až po ověření ceny a dopadu.
+  - Vyšší effort a více agentů zvyšují spotřebu tokenů.
+  - Kontrolujte zbývající kredity a limity před náročným úkolem.
 - Co je kontext
+  - Kontext je soubor informací, se kterými model právě pracuje.
+  - Patří sem zadání, historie konverzace, pravidla a soubory.
+  - Relevantní kontext zlepšuje přesnost a kvalitu výsledku.
+  - Příliš mnoho výpisů a detailů může zhoršit soustředění modelu.
+  - Přidávejte jen soubory, chyby a rozhodnutí důležitá pro úkol.
+  - Při dlouhé konverzaci použijte `/compact` pro stručné shrnutí kontextu.
 - Rozdíl mezi agentním a plánovacím režimem
+  - Plánovací režim sbírá kontext, ptá se a navrhuje postup.
+  - Je vhodný pro nejasné, větší nebo rizikové úkoly.
+  - Plán lze projít a upravit před zahájením práce.
+  - Agentní režim upravuje soubory, spouští příkazy a ověřuje výsledek.
+  - Použijte jej po odsouhlasení jasného plánu.
+  - Mezi režimy přepnete klávesovou zkratkou Ctrl + P.
 - Co jsou Superpowers
+  - Superpowers jsou postupy pro kvalitnější vývoj softwaru s AI.
+  - Vedou brainstorming, plánování, testování, ladění a ověřování výsledků.
+  - Pomáhají zejména u středně velkých a složitých změn.
+  - Pro malé úpravy by jejich použití zbytečně zpomalilo práci.
 - Co je master pravidlo
+  - Hlavní pravidlo určuje dlouhodobé chování agenta.
+  - Definuje bezpečnost, styl práce, povolené nástroje a omezení.
+  - Zajišťuje stejný způsob práce napříč projekty a úkoly.
+  - Má být stručné, konkrétní a pravidelně udržované.
 - Co je skill
+  - Skill je opakovatelný návod pro konkrétní typ úkolu.
+  - Obsahuje postup, pravidla, zdroje a případně pomocné skripty.
+  - Aktivuje se podle zadání uživatele nebo povahy úkolu.
+  - Zvyšuje konzistenci a snižuje riziko opomenutí kroků.
 - Co je MCP
+  - MCP je standard pro připojení AI k nástrojům a datům.
+  - Umožňuje bezpečný přístup ke službám, souborům a firemním systémům.
+  - Agent přes MCP čte informace nebo provádí povolené akce.
+  - Oprávnění a důvěryhodnost připojení je nutné vždy kontrolovat.
