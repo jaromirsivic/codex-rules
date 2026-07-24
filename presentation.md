@@ -2,11 +2,21 @@
   - Vysvětlení, že umělá inteligence je technologie, která z dat rozpoznává vzory a pomáhá řešit úlohy.
   - Příklady z běžného života: doporučení obsahu, překladače, rozpoznávání obrazu a hlasoví asistenti.
   - Zdůraznění, že AI nemyslí jako člověk, ale vytváří odpovědi podle naučených souvislostí.
+- Co je to neuronová síť
+  - Model inspirovaný propojením neuronů v lidském mozku.
+  - Vrstvy neuronů postupně zpracovávají vstupní informace.
+  - Učí se úpravou vah podle velkého množství dat.
+  - Používá se pro obraz, řeč, text i predikce.
 - Co je LLM
   - Jazykový model pracující s velkým množstvím textu.
   - Předpovídá další slova podle kontextu.
   - Umí psát, shrnovat, překládat i odpovídat.
 - Co je to token
+  - Token je malá jednotka textu, kterou model zpracovává.
+  - Může představovat slovo, část slova nebo interpunkci.
+  - Tokeny spotřebovává zadání, kontext i vygenerovaná odpověď.
+  - Delší konverzace a soubory znamenají vyšší spotřebu tokenů.
+  - Počet tokenů ovlivňuje limity, rychlost a cenu práce.
 - Vývoj v posledních několika měsících
   - GPT-5.6 spojil rychlé odpovědi s hlubším uvažováním.
   - Modely lépe plánují vícekrokové úkoly a používají nástroje.
@@ -21,7 +31,7 @@
   - Claude Code: terminálový agent pro úpravy kódu a testy.
   - Cursor: editor s rychlým doplňováním a úpravami přímo v kódu.
   - Codex se hodí pro delegování delších úkolů a automatické testování. Claude Code pracuje přímo v terminálu a dobře rozumí projektu. Cursor je nejrychlejší pro průběžné úpravy v editoru. Codex a Claude Code vyžadují jasné zadání a kontrolu výsledku, Cursor je slabší pro dlouhé úkoly na pozadí.
-- Kodex aplikace a základní rozložení
+- Codex aplikace a základní rozložení
   - Levý panel: projekty, úkoly a rychlá navigace.
     - Přepínání mezi projekty, úkoly a historií.
     - Vytvoření nového úkolu a hledání starších konverzací.
@@ -31,8 +41,8 @@
   - Pravý panel: soubory, kontext a podrobnosti aktuálního úkolu.
     - Prohlížeč souborů pro aktuální projekt.
     - Kontext úkolu, nastavení a doplňkové informace.
-- Co je model
-  - Model je AI systém naučený rozpoznávat vzory v datech.
+- Co je to model
+  - Model je AI systém naučený na globálních datech (celém internetu)
   - Luna: rychlá volba pro jasné, opakované úkoly.
   - Terra: vyvážený model pro běžnou práci s nástroji.
   - Sol: nejvyšší kvalita pro složité a otevřené úkoly.
@@ -60,6 +70,21 @@
   - Placené nabídky potvrďte až po ověření ceny a dopadu.
   - Vyšší effort a více agentů zvyšují spotřebu tokenů.
   - Kontrolujte zbývající kredity a limity před náročným úkolem.
+- Co je master pravidlo
+  - Hlavní pravidlo určuje dlouhodobé chování agenta.
+  - Definuje bezpečnost, styl práce, povolené nástroje a omezení.
+  - Zajišťuje stejný způsob práce napříč projekty a úkoly.
+  - Má být stručné, konkrétní a pravidelně udržované.
+- Co je skill
+  - Skill je opakovatelný návod pro konkrétní typ úkolu.
+  - Obsahuje postup, pravidla, zdroje a případně pomocné skripty.
+  - Aktivuje se podle zadání uživatele nebo povahy úkolu.
+  - Zvyšuje konzistenci a snižuje riziko opomenutí kroků.
+- Co je MCP
+  - MCP je standard pro připojení AI k nástrojům a datům.
+  - Umožňuje bezpečný přístup ke službám, souborům a firemním systémům.
+  - Agent přes MCP čte informace nebo provádí povolené akce.
+  - Oprávnění a důvěryhodnost připojení je nutné vždy kontrolovat.
 - Co je kontext
   - Kontext je soubor informací, se kterými model právě pracuje.
   - Patří sem zadání, historie konverzace, pravidla a soubory.
@@ -79,18 +104,3 @@
   - Vedou brainstorming, plánování, testování, ladění a ověřování výsledků.
   - Pomáhají zejména u středně velkých a složitých změn.
   - Pro malé úpravy by jejich použití zbytečně zpomalilo práci.
-- Co je master pravidlo
-  - Hlavní pravidlo určuje dlouhodobé chování agenta.
-  - Definuje bezpečnost, styl práce, povolené nástroje a omezení.
-  - Zajišťuje stejný způsob práce napříč projekty a úkoly.
-  - Má být stručné, konkrétní a pravidelně udržované.
-- Co je skill
-  - Skill je opakovatelný návod pro konkrétní typ úkolu.
-  - Obsahuje postup, pravidla, zdroje a případně pomocné skripty.
-  - Aktivuje se podle zadání uživatele nebo povahy úkolu.
-  - Zvyšuje konzistenci a snižuje riziko opomenutí kroků.
-- Co je MCP
-  - MCP je standard pro připojení AI k nástrojům a datům.
-  - Umožňuje bezpečný přístup ke službám, souborům a firemním systémům.
-  - Agent přes MCP čte informace nebo provádí povolené akce.
-  - Oprávnění a důvěryhodnost připojení je nutné vždy kontrolovat.
