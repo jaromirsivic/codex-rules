@@ -1,0 +1,17 @@
+- Co je umělá inteligence
+- Co je LLM
+- Vývoj v posledních několika měsících
+- Rozdíl mezi asistentem a agentem
+- Aktuální nástroje Codex, Claude a Cursor
+- Kodex aplikace a základní rozložení
+- Levý panel
+- Co je model
+- Co je effort
+- Typy přístupu k počítači včetně full access
+- Platby v aplikaci
+- Co je kontext
+- Rozdíl mezi agentním a plánovacím režimem
+- Co jsou Superpowers
+- Co je master pravidlo
+- Co je skill
+- Co je MCP

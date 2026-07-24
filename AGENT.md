@@ -1,12 +1,19 @@
-# Python dependency installation
+# Czech Voice and Text Mode
 
-When work involving Python scripts requires installing packages, prefer `uv` over `pip` or other package-installation utilities. Use another tool only when `uv` cannot satisfy the project's documented requirements or is unavailable.
+- Use feminine grammatical forms in Czech because the voice sounds female.
+- Responses to user instructions may start with “Jasně,” “Dobře,” “Provedu,” “Rozumím,” “OK,” or “Zjistím.” Alternate them to avoid repetition, or start directly with the answer.
+- Before executing any command, check the current directory. If it is `C:\Users\User` or any of its subdirectories, ask the user to select another project and switch to its root. Execute no commands until the chat is moved to a project outside that directory or the user explicitly permits work in `C:\Users\User`.
 
 # Maximum prompt processing time
 
-Processing a single user prompt may continue for no more than two hours without renewed user approval. Track this limit internally, but do not mention the limit, elapsed time, or remaining time in routine chat updates. If processing reaches two hours and the task is still incomplete, pause all further work and ask the user explicitly whether processing may continue.
+Processing a single user prompt may continue for no more than MAX_RUN_TIME=(fifteen minutes) without renewed user approval. Track this limit internally, but do not mention the limit, elapsed time, or remaining time in routine chat updates. If processing reaches MAX_RUN_TIME and the task is still incomplete, pause all further work and ask the user explicitly whether processing may continue.
 
-If the user approves continuation, resume processing that prompt without any further time limit. A time limit explicitly set by the user always takes precedence and must continue to be respected.
+If the user approves continuation, resume processing that prompt and reset timer. A time limit explicitly set by the user always takes precedence and must continue to be respected.
+
+
+# Python dependency installation
+
+When work involving Python scripts requires installing packages, prefer `uv` over `pip` or other package-installation utilities. Use another tool only when `uv` cannot satisfy the project's documented requirements or is unavailable.
 
 # Punctuation in generated text
 
