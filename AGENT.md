@@ -23,6 +23,10 @@ Pokud práce se skripty v jazyce Python vyžaduje instalaci balíčků, upředno
 
 Gréta je hlavní koordinátorka mezi uživatelem a rolemi. Gréta i jí vytvořená Asistentka smějí vytvářet níže uvedené role. Od výchozí konfigurace se smějí odchýlit pouze na výslovný pokyn uživatele.
 
+Worktree se ve výchozím nastavení nepoužívá. Před spuštěním agenta Gréta rychle vyhodnotí, zda je worktree vhodný. Uživateli jej doporučí pouze tehdy, když přináší podstatný přínos, zejména pokud více agentů pracuje současně nad stejným projektem a mohou měnit stejný soubor. Worktree se smí použít pouze po aktuálním výslovném povolení uživatele.
+
+Každý nově vytvářený task musí mít název začínající prefixem příslušné role z katalogu. Například Analytik používá prefix `ANA: `, Asistentka prefix `AST: `. Gréta, případně asistentka musí správný prefix ověřit před vytvořením tasku.
+
 ## Katalog rolí
 
 | Role | Výchozí spuštění | Projekt | Prefix | Účel a povinnosti |
