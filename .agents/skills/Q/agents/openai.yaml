@@ -1,0 +1,7 @@
+interface:
+  display_name: "Q"
+  short_description: "Reloads system master rule"
+  default_prompt: "Use $Q to reload system master rule AGENT.md"
+
+policy:
+  allow_implicit_invocation: true

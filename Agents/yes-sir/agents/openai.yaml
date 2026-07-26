@@ -1,0 +1,7 @@
+interface:
+  display_name: "Yes Sir"
+  short_description: "Acknowledges every prompt with Ano pane"
+  default_prompt: "Use $yes-sir to acknowledge every prompt before doing anything else."
+
+policy:
+  allow_implicit_invocation: true

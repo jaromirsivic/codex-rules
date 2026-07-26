@@ -1,0 +1,18 @@
+{
+  "description": "Records each submitted prompt for local hook verification.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "true",
+            "commandWindows": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\git\\codex-rules\\.codex\\hooks\\prompt-submission-log.ps1\"",
+            "timeout": 5,
+            "statusMessage": "Recording prompt-hook test"
+          }
+        ]
+      }
+    ]
+  }
+}
