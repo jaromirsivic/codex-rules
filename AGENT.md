@@ -22,6 +22,14 @@ When generating prose in any language, avoid using an em dash (`—`) whenever p
 
 When generating text in a Word document or other analytical prose, avoid semicolons whenever possible. Use a comma, period, or colon instead. Semicolons may be used in source code when required by the language syntax.
 
+# Project task routing
+
+When the user asks to solve a task in a specific project, prefer creating a separate new chat or task within that project. If additional agent work is needed, prefer separate new project chats or tasks over subagents. Use a subagent only for a tightly scoped subtask within the current task, or when the user explicitly requests one.
+
+The title of every separate new project chat or task created for an agent must begin with `MMDDHHmm-MMME: Task name`. In the eight-digit time block, uppercase `MM` is the month (`01` through `12`), `DD` is the day of the month (`01` through `31`, as valid for the month), `HH` is the 24-hour hour (`00` through `23`), and lowercase `mm` is the minute (`00` through `59`). Use the first three characters of the model name for `MMM` and the effort designation for `E`. Write the model and effort code in uppercase, for example `ASTH` for Astra High or `SOLH` for Sol High.
+
+For a project managed with Git, create and run the new chat or task directly in the saved project by default. Do not use a Git worktree unless the user explicitly permits or requires it.
+
 # Project registry
 
 Use this registry when the user names a project at the beginning of a conversation. Compare the supplied project name with the registered project names and aliases case-insensitively after trimming surrounding whitespace. When exactly one entry matches, activate that project's context.
