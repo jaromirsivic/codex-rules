@@ -50,3 +50,4 @@ Keep project names unique. List multiple aliases consistently, separated by comm
 |---|---|---|---|---|
 |phpvpn|php vpn|c:\git\phpvpn|c:\git\phpvpn|Jedná se o můj pet project, který zatím není nikde produkčně nasazený, ale plánuji pro něj velké využití. Načti si primárně c:\git\phpvpn\protocol.md a c:\git\phpvpn\client.md|
 |mimosa|mimoza, fingrid|C:\git\holly\server\data\project\work|C:\git\holly\server\data\project\work|Jedná se o projekt pro společnost Fingrid (Finský Power Grid), kde řešíme MFRR a AFRR. Načti si primárně dokument detailní analýzy (detail design) C:\git\holly\server\data\project\work\fd04\FD04 Balancing energy market\FD04 Balancing energy market.md|
+|Unicorn AI Analyst|Unicorn AI Analytik, Unicorn AI|C:\git\uu-analyst-set-ai| C:\git\uu-analyst-set-ai|Projekt zaměřený na tvorbu skillů a masivní zapojení AI do analýzy u velkých IT projektů v energetice a bankovnictví|
