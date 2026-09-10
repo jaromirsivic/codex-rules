@@ -8,15 +8,15 @@ Never create a new chat, thread, agent, subagent, multi-agent team, or equivalen
 
 These mappings apply to masculine, feminine, and otherwise gendered wording of each role:
 
-| Seniority | Model | Effort |
-|---|---|---|
-| Assistant | Luna | Medium |
-| Junior | Sol | Light |
-| Medior | Sol | Medium |
-| Senior | Sol | High |
-| Expert | Astra | Medium |
+| Seniority | Claude model | Claude effort | Codex model | Codex effort | Cursor model | Cursor effort |
+|---|---|---|---|---|---|---|
+| Assistant | Opus 5.0 | Low | Luna | Medium | Luna | Medium |
+| Junior | Opus 5.0 | Low | Sol | Light | Sol | Light |
+| Medior | Opus 5.0 | Medium | Sol | Medium | Sol | Medium |
+| Senior | Opus 5.0 | High | Sol | High | Sol | High |
+| Expert | Fable 5.1 | Medium | Astra | Medium | Astra | Medium |
 
-Precedence: an explicitly supplied model-and-effort pair overrides this table. Otherwise, use the seniority named in the role. If neither seniority nor a model-and-effort pair is supplied, default to `Medior`. Seniority controls only model and effort. The rest of the role phrase controls expertise and responsibilities. Example: a senior IT developer is the IT developer role using Sol with High effort.
+Precedence: an explicitly supplied model-and-effort pair overrides this table. Otherwise, the current harness selects its columns and the seniority named in the role selects the row. If neither seniority nor a model-and-effort pair is supplied, default to the `Medior` row for the current harness. Seniority controls only model and effort. The rest of the role phrase controls expertise and responsibilities. Example: in Codex, a senior IT developer is the IT developer role using Sol with High effort.
 
 # Python dependency installation
 
