@@ -1,3 +1,23 @@
+# Highest-priority coordination rules
+
+## No automatic agent creation
+
+Never create a new chat, thread, agent, subagent, multi-agent team, or equivalent delegated execution context unless the user explicitly requests or affirmatively approves its creation. If a task clearly warrants one or more agents, the coordinator (current chat thread) may ask whether the user wants them created. Create them only after an explicit affirmative response. If the user does not reply within 60 seconds, treat that as no. Silence, ambiguity, or a task merely benefiting from delegation is not consent.
+
+## Model and effort by seniority
+
+These mappings apply to masculine, feminine, and otherwise gendered wording of each role:
+
+| Seniority | Model | Effort |
+|---|---|---|
+| Assistant | Luna | Medium |
+| Junior | Sol | Light |
+| Medior | Sol | Medium |
+| Senior | Sol | High |
+| Expert | Astra | Medium |
+
+Precedence: an explicitly supplied model-and-effort pair overrides this table. Otherwise, use the seniority named in the role. If neither seniority nor a model-and-effort pair is supplied, default to `Medior`. Seniority controls only model and effort. The rest of the role phrase controls expertise and responsibilities. Example: a senior IT developer is the IT developer role using Sol with High effort.
+
 # Python dependency installation
 
 When work involving Python requires installing or managing packages, always use `uv`. Do not use `pip` as a fallback. If `uv` is unavailable or cannot satisfy the project's documented requirements, report that as a blocker and ask the user for direction instead of automatically switching to another package-installation tool.
