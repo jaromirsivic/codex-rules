@@ -38,6 +38,24 @@ Once creation is authorized, prefer separate tasks in the named project over sub
 
 For Git projects, run new tasks directly in the saved project. Create or use a Git worktree only with explicit user permission. Coordinate shared-checkout work so concurrent tasks do not modify overlapping files or Git state.
 
+## Delegated-work time limits and safe parking
+
+The highest user-facing coordinating agent that starts any task, thread, agent, or subagent owns user authorization and time-limit coordination for that entire delegated-work tree. This rule applies only to descendants created for that work, including descendants created by other descendants.
+
+- The default stopping deadline is two hours and five minutes after a descendant starts. Under the default, the highest coordinating agent asks the user for an extension after two hours, leaving a five-minute decision window before parking begins.
+- The user may explicitly authorize a longer fixed runtime or unlimited runtime in the initial request or later. Follow the exact authorization the user grants. Treat runtime as unlimited only when the user explicitly says so. Never infer an unlimited authorization.
+- Whenever any agent creates a direct descendant, it must tell that descendant the applicable fixed deadline, remaining authorized duration, or explicit unlimited status as part of initialization. The highest coordinating agent is responsible for establishing this information from the user's authorization, and every intermediate agent must propagate it to its own descendants. Propagate every later extension or change through the same tree immediately.
+- Every agent and subagent must independently track its own elapsed runtime and the limit it received. It must also ensure that its own descendants received and track the applicable limit. This is a mandatory fallback safeguard, not merely a reporting duty.
+- If a descendant receives no time-limit information, it must silently apply the default stopping deadline of two hours and five minutes after its own start. It does not need to warn its parent that the default is being applied.
+- A descendant that has not received a valid extension or unlimited authorization by its stopping deadline must begin safe parking on its own, recursively park its descendants, and report its parked state upward. It must not wait indefinitely for the highest coordinating agent's stop instruction.
+- Only the highest user-facing coordinating agent asks the user for an extension. Under a fixed authorization, it must ask early enough to allow up to five minutes for an explicit reply before the applicable stopping deadline. Use an available bounded wait, monitoring, or scheduling mechanism. If approval specifies a duration or deadline, propagate that exact limit. If approval is explicit but gives no duration, authorize and propagate one additional two-hour-and-five-minute window starting at approval, with the next extension request due after two hours. Repeat this procedure at every later deadline. Explicit unlimited approval removes later time-limit prompts for that work tree and must be propagated as unlimited.
+- If the user rejects the extension or does not explicitly approve it within the five-minute decision window, the highest coordinating agent must tell every directly created descendant to stop starting new work and safely park as soon as possible. Each recipient must preserve completed results, current state, unresolved issues, and the exact continuation point, recursively issue the same instruction to all of its descendants, and report upward when it and its confirmed descendants are safely parked.
+- The highest coordinating agent must collect confirmations for the complete tree. It must not claim that an agent, subagent, task, or thread is paused unless that state was verified. Report any unreachable, unverified, or unparked descendant explicitly.
+- Only after the complete tree is verified as safely parked, show the user exactly this Markdown level-one heading: `# All activity has stopped. All agents and subagents are safely paused pending approval to extend the time limit.`
+- Parked work must not resume until the user explicitly approves an extension or unlimited runtime.
+
+These rules require an execution context that can measure elapsed time and wake or continue the coordinating agent at the deadline. When the host cannot provide that capability, disclose the limitation and do not claim that automatic enforcement occurred.
+
 # Model and effort selection
 
 Apply this table when configuring authorized contexts. It does not authorize creation, replacement, or restart. Change existing contexts only as requested and through supported controls. Otherwise report that user action is required.
