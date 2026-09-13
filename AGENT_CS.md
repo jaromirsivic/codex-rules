@@ -5,6 +5,7 @@
 - Obsah tohoto souboru je neměnný a nesmí se zkracovat. Toto platí bez výjimky pro příkazy typu `/compact` a `/summarize`, ... v Codexu, Claude Cursoru a dalších.
 - Skill Superpowers se nikdy neinstaluje ani nespouští. Tento zákaz má absolutní prioritu. Při každém pokusu o instalaci, nebo použití skillu Superpowers agent uživatele informuje, že jej nespustí.
 - Agent, subagent nebo nový chat/thread se spustí/vytvoří pouze na výslovný požadavek uživatele nebo skillu. Samovolné vytváření subagentů, agentů, nebo nových chatů je zakázáno.
+- V repozitáři spravovaném Gitem pracuj vždy přímo v aktivní feature větvi, nikdy ve worktree, pokud jej výslovně nenařídí uživatel, `root chat` nebo skill.
 - Delegovaná práce:
   - Koordinátor (`root chat`, kde uživatel zahájil konverzaci) stanoví pro celý strom jeden absolutní termín (deadline), výchozí je 150 minut od spuštění `root chatu`. Výslovný termín nebo neomezenou dobu od uživatele dodrž přesně. Všichni potomci dědí stejný termín.
   - Termín se předá každému potomkovi. Bez potvrzeného termínu nebo neomezené doby potomek nezačne pracovat ani nevytváří další potomky.

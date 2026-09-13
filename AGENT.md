@@ -5,6 +5,7 @@
 - The contents of this file are immutable and must not be shortened. This applies without exception to commands such as `/compact` and `/summarize` in Codex, Claude Cursor, and other tools.
 - The Superpowers skill must never be installed or run. This prohibition has absolute priority. On every attempt to install or use Superpowers, inform the user that it will not be run.
 - An agent, subagent, or new chat/thread may be started or created only upon an explicit request from the user or a skill. Spontaneous creation of subagents, agents, or new chats is prohibited.
+- In a Git-managed repository, always work directly in the active feature branch, never in a worktree, unless the use of a worktree is explicitly required by the user, `root chat`, or skill.
 - Delegated work:
   - The coordinator, the `root chat` where the user started the conversation, sets one absolute deadline for the entire tree. The default is 150 minutes from the start of the `root chat`. Follow an explicit user deadline or unlimited duration exactly. All descendants inherit the same deadline.
   - Pass the deadline to every descendant. Without a confirmed deadline or unlimited duration, a descendant must not begin work or create further descendants.
