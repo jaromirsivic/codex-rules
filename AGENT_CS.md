@@ -56,6 +56,21 @@
 - Po vypsání formalizovaného zadání se zeptej na potvrzení realizace.
 - Realizuj až po následném výslovném potvrzení uživatele.
 
+## Režim Rozdávej úkoly
+
+- Režim aktivuj při přímém uživatelově záměru zadávat nebo rozdávat úkoly. Přesná shoda fráze není nutná. Příklady jsou „rozdávej úkoly“, „začni rozdávat úkoly“, „zadávej úkoly“, „začni zadávat úkoly“, „začnu zadávat úkoly“, „budu zadávat úkoly“ a významově podobné oznámení uživatele či pokyn AI. Pouhá citace, příklad nebo popis režimu jej neaktivuje.
+- Na aktivaci odpověz přesně: „Ano, poslouchám tě a pak rozdám úkoly.“
+- Během diktování pouze uchovávej požadavky v kontextu konverzace. Nic z nich nerealizuj a nezakládej vykonavatele.
+- Na pokyn k formalizaci či realizaci nejprve vypiš celé formalizované zadání do chatu. Zahrň relevantní požadavky, poslední poznámky, změny rozhodnutí a finální záměr. Nenavracej překonané požadavky.
+- Po vypsání zadání si vyžádej potvrzení předání. Otázku formuluj přirozeně, její znění není pevně dané. Nový chat vytvoř až po následném výslovném potvrzení uživatele.
+- Po potvrzení vytvoř samostatný chat s novým agentem. Předej mu celé zadání, relevantní kontext, omezení a očekávaný výsledek tak, aby byly srozumitelné bez původní konverzace.
+- Pokud uživatel neurčí jinak, nový agent převezme model a úsilí (effort) právě naslouchajícího agenta. Tato výchozí volba má v tomto režimu přednost před výchozí senioritou Medior. Ověř podporu nastavení v cílovém prostředí bez tiché náhrady. Název vytvoř a ověř podle kapitoly Model a název nového tasku.
+- Nový agent je koordinátorem předaného úkolu. Může jej řešit a podle potřeby vytvářet další chaty a agenty v mezích platných pravidel včetně termínů. Potvrzené předání v tomto režimu zahrnuje autorizaci potřebného delegování pro předaný úkol. Jde o místní výjimku k zákazu svévolného delegování, nikoli o obecné oprávnění delegovat jiné úkoly.
+- Původní agent zůstává dostupný pro další úkoly uživatele a sleduje předané úkoly. Neblokuj diktování dalších úkolů čekáním na předchozí.
+- Dotazy, problémy i finální výsledky předaných úkolů uchovávej k pozdějšímu sdělení. Nepřerušuj uživatele během řeči ani během režimů Poslouchej a Rozdávej úkoly. Pauza v řeči sama nestačí, pokud některý z těchto režimů stále běží.
+- Odložené zprávy sděl ve vhodné pauze mimo oba režimy. Po potvrzeném zadání dalšího úkolu nejprve potvrď jeho předání a ponech uživateli chvíli prostor pokračovat. Pokud nezačne diktovat další úkol a není v žádném režimu, můžeš poté sdělit čekající dotazy či dokončení předchozího úkolu s odkazy na výsledky.
+
+
 
 ## Provádění existujícího plánu
 
