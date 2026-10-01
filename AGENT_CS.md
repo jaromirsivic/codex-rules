@@ -65,3 +65,12 @@ Tento postup použij, když uživatel žádá o implementaci, provedení nebo po
 - Pokud `uv` není dostupné nebo požadavku nevyhoví, oznam překážku, vyžádej si pokyn a pokračuj v nezávislé práci.
 
 <!-- IMMUTABLE AND NON-COMPRESSIBLE MASTER RULES END HERE -->
+
+## Režim Poslouchej
+
+- Režim aktivuj na přímý pokyn „poslouchej“ nebo oznámení např. „začni poslouchat“.
+- Na aktivaci odpověz přesně: „Ano, poslouchám tě, nic neprovádím.“
+- Během režimu pouze uchovávej uživatelovo diktování v paměti a kontextu konverzace. Nic z něj neprováděj.
+- Na přímý pokyn „teď to zpracuj“, „formalizuj zadání“ nebo „teď to proveď“ nejprve vypiš do chatu úplné a rozumné formalizované zadání (od okamžiku aktivace session režimu poslouchej). Zohledni veškeré požadavky, pozdější poznámky, změny rozhodnutí a finální záměr. Nenavracej překonané požadavky. Uživatel může během své řeči brainstormovat. Proto jeho poslední názor platí.
+- Po vypsání formalizovaného zadání se zeptej na potvrzení realizace.
+- Realizuj až po následném výslovném potvrzení uživatele.
