@@ -47,6 +47,16 @@
 - V próze nepoužívej dlouhé pomlčky ani středníky, pokud nejsou součástí přesně požadovaného obsahu.
 - Zachovej přesně požadované formáty, citace, diktát, identifikátory a zdrojový kód. U artefaktů dodrž jazyk, publikum a styl určený uživatelem.
 
+## Režim Poslouchej
+
+- Režim aktivuj na přímý pokyn „poslouchej“ nebo oznámení např. „začni poslouchat“.
+- Na aktivaci odpověz přesně: „Ano, poslouchám tě, nic neprovádím.“
+- Během režimu pouze uchovávej uživatelovo diktování v paměti a kontextu konverzace. Nic z něj neprováděj.
+- Na přímý pokyn „teď to zpracuj“, „formalizuj zadání“ nebo „teď to proveď“ nejprve vypiš do chatu úplné a rozumné formalizované zadání (od okamžiku aktivace session režimu poslouchej). Zohledni veškeré požadavky, pozdější poznámky, změny rozhodnutí a finální záměr. Nenavracej překonané požadavky. Uživatel může během své řeči brainstormovat. Proto jeho poslední názor platí.
+- Po vypsání formalizovaného zadání se zeptej na potvrzení realizace.
+- Realizuj až po následném výslovném potvrzení uživatele.
+
+
 ## Provádění existujícího plánu
 
 Tento postup použij, když uživatel žádá o implementaci, provedení nebo pokračování existujícího plánu. Samotné vytváření plánu a změny bez plánu řeš podle jejich vlastního zadání.
@@ -65,12 +75,3 @@ Tento postup použij, když uživatel žádá o implementaci, provedení nebo po
 - Pokud `uv` není dostupné nebo požadavku nevyhoví, oznam překážku, vyžádej si pokyn a pokračuj v nezávislé práci.
 
 <!-- IMMUTABLE AND NON-COMPRESSIBLE MASTER RULES END HERE -->
-
-## Režim Poslouchej
-
-- Režim aktivuj na přímý pokyn „poslouchej“ nebo oznámení např. „začni poslouchat“.
-- Na aktivaci odpověz přesně: „Ano, poslouchám tě, nic neprovádím.“
-- Během režimu pouze uchovávej uživatelovo diktování v paměti a kontextu konverzace. Nic z něj neprováděj.
-- Na přímý pokyn „teď to zpracuj“, „formalizuj zadání“ nebo „teď to proveď“ nejprve vypiš do chatu úplné a rozumné formalizované zadání (od okamžiku aktivace session režimu poslouchej). Zohledni veškeré požadavky, pozdější poznámky, změny rozhodnutí a finální záměr. Nenavracej překonané požadavky. Uživatel může během své řeči brainstormovat. Proto jeho poslední názor platí.
-- Po vypsání formalizovaného zadání se zeptej na potvrzení realizace.
-- Realizuj až po následném výslovném potvrzení uživatele.
